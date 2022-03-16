@@ -1,15 +1,22 @@
-// import logo from './logo.svg';
+
 import './App.css';
-import { MainRoutes } from './Routes/MainRoutes';
+import { MoviesDashboard } from './components/MoviesDashboard';
 import { Navbar } from './components/Navbar';
+import {Home} from './components/Home'
+import {About} from './components/About'
+import {Route, Routes} from 'react-router-dom'
+import { SingleMovieDetails } from './components/SingleMovieDetails';
 
 function App() {
   return (
     <div className="App">
-
-      <h2>Hello..........</h2>
-      <Navbar></Navbar>
-      <MainRoutes></MainRoutes>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element = { <Home/> }/>
+        <Route path= "/about" element = { <About/> }/>
+        <Route path="/movies" element = { <MoviesDashboard/> }/>
+        <Route path="/movies/:id" element = { <SingleMovieDetails/> }/>
+      </Routes>
     </div>
   );
 }

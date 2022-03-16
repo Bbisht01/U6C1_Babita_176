@@ -1,4 +1,5 @@
-import {NavLink } from "react-router-dom";
+import "./Navbar.css"
+import {Link} from 'react-router-dom'
 
 const links = [
   {
@@ -6,33 +7,14 @@ const links = [
     link: "/",
     id: "header-link-home",
   },
-  {
-    title: "About",
-    link: "/about",
-    id: "header-link-about",
-  },
-  {
-    title: "movies",
-    link: "/movies",
-    id: "header-link-movies",
-  },
   //   add the other link as well
 ];
 export const Navbar = () => {
   return (
-    <div style={{backgroundColor:"grey",height:"40px"}}>
-{links.map(({title,link,index,id})=>{
-  return (    
-    <NavLink
-      key={index}
-      to={link} id={id}>      
-      {title}
-    </NavLink>   
-  );
-})}
-</div>
-
-
-  ); 
-  
+    <div id="navbar">
+      <Link to="/"><h2 id="header-link-home">Home</h2></Link>
+      <Link to="/about"><h2 id="header-link-about">About</h2></Link>
+      <Link to="/movies"><h2 id="header-link-movies">Movies</h2></Link>
+    </div>
+  )
 };
