@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import {NavLink } from "react-router-dom";
 
 const links = [
   {
@@ -21,11 +21,11 @@ const links = [
 export const Navbar = () => {
   return (
     <div style={{backgroundColor:"grey",height:"40px"}}>
-{links.map(({title,link},index)=>{
+{links.map(({title,link,index,id})=>{
   return (    
     <NavLink
       key={index}
-      link={link}>      
+      to={link} id={id}>      
       {title}
     </NavLink>   
   );

@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-const genres = ["Comedy", "Thriller", "Drama", "Documentary", "Children"];
+// const genres = ["Comedy", "Thriller", "Drama", "Documentary", "Children"];
 
 export const MoviesDashboard = () => {
   
